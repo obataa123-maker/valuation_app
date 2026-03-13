@@ -1,0 +1,66 @@
+function incNum(v){
+  v = String(v || '').replace(/,/g,'').trim();
+  var n = parseFloat(v);
+  return isNaN(n) ? 0 : n;
+}
+
+function incFmt(n){
+  return Number(n || 0).toLocaleString('en-US', {
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0
+  });
+}
+
+function recalcIncomeApproach(){
+  var B   = incNum(document.getElementById('inc_B')?.value);
+  var G   = incNum(document.getElementById('inc_G')?.value);
+  var D   = incNum(document.getElementById('inc_D')?.value);
+  var E   = incNum(document.getElementById('inc_E')?.value);
+
+  var Z1  = incNum(document.getElementById('inc_Z1')?.value);
+  var Z2  = incNum(document.getElementById('inc_Z2')?.value);
+  var Z3  = incNum(document.getElementById('inc_Z3')?.value);
+  var Z4  = incNum(document.getElementById('inc_Z4')?.value);
+  var Z5  = incNum(document.getElementById('inc_Z5')?.value);
+  var Z6  = incNum(document.getElementById('inc_Z6')?.value);
+
+  var KZ  = incNum(document.getElementById('inc_KZ')?.value);
+  var ZEE = incNum(document.getElementById('inc_ZEE')?.value);
+  var R   = incNum(document.getElementById('inc_R')?.value);
+
+  var V   = B * 12;
+  var BNO = V - G - D + E;
+  var NZ  = Z1 + Z2 + Z3 + Z4 + Z5 + Z6;
+  var TOA = BNO - NZ - KZ - ZEE;
+  var TAX = TOA * 0.10;
+  var TDA = TOA - TAX;
+  var CMU = TDA + Z5;
+  var P   = R !== 0 ? (CMU / R) : 0;
+
+  if(document.getElementById('inc_V'))   document.getElementById('inc_V').textContent = incFmt(V);
+  if(document.getElementById('inc_BNO')) document.getElementById('inc_BNO').textContent = incFmt(BNO);
+  if(document.getElementById('inc_NZ'))  document.getElementById('inc_NZ').textContent = incFmt(NZ);
+  if(document.getElementById('inc_TOA')) document.getElementById('inc_TOA').textContent = incFmt(TOA);
+  if(document.getElementById('inc_TAX')) document.getElementById('inc_TAX').textContent = incFmt(TAX);
+  if(document.getElementById('inc_TDA')) document.getElementById('inc_TDA').textContent = incFmt(TDA);
+  if(document.getElementById('inc_CMU')) document.getElementById('inc_CMU').textContent = incFmt(CMU);
+  if(document.getElementById('inc_P'))   document.getElementById('inc_P').textContent = incFmt(P);
+}
+
+document.addEventListener('input', function(e){
+  if(e.target && e.target.classList && e.target.classList.contains('income-inp')){
+    recalcIncomeApproach();
+  }
+}, true);
+
+document.addEventListener('change', function(e){
+  if(e.target && e.target.classList && e.target.classList.contains('income-inp')){
+    recalcIncomeApproach();
+  }
+}, true);
+
+if(document.readyState === 'loading'){
+  document.addEventListener('DOMContentLoaded', recalcIncomeApproach);
+} else {
+  recalcIncomeApproach();
+}

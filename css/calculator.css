@@ -1,0 +1,131 @@
+.calc-field {
+    position: relative;
+    width: 100%;
+}
+
+.calc-field input {
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 34px !important;
+}
+
+.calc-btn {
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 22px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 1;
+    opacity: 0.75;
+}
+
+.calc-btn:hover {
+    opacity: 1;
+}
+
+.calc-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.22);
+    z-index: 99999;
+}
+
+.calc-modal.show {
+    display: block;
+}
+
+.calc-panel {
+    width: 320px;
+    max-width: calc(100vw - 20px);
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+    overflow: hidden;
+    position: absolute;
+    border: 1px solid #e5e5e5;
+}
+
+.calc-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 13px;
+    background: #f8f8f8;
+}
+
+.calc-close {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.calc-body {
+    padding: 10px;
+}
+
+.calc-screen {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 16px;
+    text-align: right;
+    margin-bottom: 8px;
+    outline: none;
+}
+
+.calc-result-preview {
+    min-height: 18px;
+    text-align: right;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.calc-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.calc-key {
+    border: 1px solid #d8d8d8;
+    background: #fff;
+    border-radius: 8px;
+    padding: 10px 0;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.calc-key:hover {
+    background: #f4f4f4;
+}
+
+.calc-key.op {
+    background: #f8f8f8;
+}
+
+.calc-key.eq {
+    background: #222;
+    color: #fff;
+    border-color: #222;
+}
+
+.calc-key.eq:hover {
+    background: #111;
+}
+
+.calc-key.wide {
+    grid-column: span 2;
+}

@@ -1,0 +1,605 @@
+/* ===== Theme layer (non-breaking) ===== */
+:root{
+  --bg: #ffffff;
+  --text: #58666e;
+  --panel: #ffffff;
+  --border: #d0d5dd;
+  --brand: #f04949;
+  --sidebar-bg: #fbfbfd;
+  --sidebar-text: #a6a8b1;
+  --hover-bg: #32374a;
+  --hover-text: #ffffff;
+}
+/* Dark mode: add class="theme-dark" to <body> */
+body.theme-dark{
+  --bg: #0b1220;
+  --text: #d1d5db;
+  --panel: #0f172a;
+  --border: #263244;
+  --brand: #f04949;
+  --sidebar-bg: #0f172a;
+  --sidebar-text: #cbd5e1;
+  --hover-bg: #111827;
+  --hover-text: #ffffff;
+}
+html{ background-color: var(--bg); }
+body{ color: var(--text); background-color: transparent; }
+.sidebar{ background-color: var(--sidebar-bg) !important; color: var(--sidebar-text); border-right: 1px solid var(--border); }
+.nav > li > a:focus, .nav > li > a:hover{ background-color: var(--hover-bg); color: var(--hover-text); }
+.navbar-inverse{ background-color: var(--brand); border-color: var(--brand); }
+/* ======================================= */
+
+
+html {
+    background-color: #f0f3f4;
+    position: relative;
+    min-height: 100%;
+}
+body {
+    background-color: transparent;
+    color: #58666e;
+    font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;  
+  height: 60px;
+  background-color: #f5f5f5;
+  padding-top:15px;
+}
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+.sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-top:-1px;
+    border-right: 1px solid #eee;
+    background-color: #fbfbfd !important;
+    color: #a6a8b1;
+}
+.nav-sidebar {
+  margin-right: -21px; 
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+  color: #a6a8b1;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  color: #fff;
+  background-color: #428bca;
+}
+.nav > li > a:focus, .nav > li > a:hover{
+	color: #fff;
+  	background-color: #32374a;
+}
+.navbar-nav>li {
+	float:left;
+	margin-left:1px;
+}
+.main {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
+.navbar-inverse {
+    background-color: #f04949;
+    border-color: #f04949;
+}
+.navbar-inverse .navbar-brand {
+    color: #fff;
+    font-size:20px;
+    font-weight: bold;
+}
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+    color: #fff;
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+}
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+    color: #fff;
+}
+.navbar-inverse .navbar-nav > .active > a, 
+.navbar-inverse .navbar-nav > .active > a:hover, 
+.navbar-inverse .navbar-nav > .active > a:focus {
+    color: #fff;
+    background-color: #f04949;
+}
+.navbar-inverse .navbar-nav > .open > a, 
+.navbar-inverse .navbar-nav > .open > a:hover, 
+.navbar-inverse .navbar-nav > .open > a:focus {
+    color: #fff;
+    background-color: #f04949;
+}
+div.b {
+  word-wrap: break-word;
+}
+.line {
+    font-size: 0;
+    height: 2px;
+    margin: 10px 0;
+    overflow: hidden;
+    width: 100%;
+    background-color: #2e3344;
+}
+.sidebar ul.nav li a > i {
+    float: left;
+    line-height: 40px;
+    margin: -10px 5px -10px -10px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 40px;
+}
+.sidebar ul.nav li a{
+	font-weight: 700;
+}
+.btn-success, .panel-success {
+    background-color: #27c24c !important;
+    border-color: #27c24c !important;
+    color: #fff !important;
+}
+.btn-primary, .panel-primary {
+    border-color: #7266ba;
+    color: #fff !important;
+}
+.btn-info, .panel-info {
+    background-color: #23b7e5;
+    border-color: #23b7e5;
+    color: white !important;
+	font-size: 16px;
+}
+.btn-warning, .panel-warning {
+    background-color: #fad733;
+    border-color: #fad733;
+    color: #fff !important;
+}
+.btn-danger, .panel-danger {
+    background-color: #f05050;
+    border-color: #f05050;
+    color: #fff !important;
+}
+.btn-dark, .panel-dark {
+    background-color: #f1f1f1;
+    border-color: #f1f1f1;
+    color: #fff !important;
+}
+.footer{
+	z-index: 9999;
+}
+.btn i{
+	padding-left:5px;
+	padding-right:10px;
+}
+.account-menu .fa, .dropdown-menu li a .fa{
+	padding-left:5px;
+	padding-right:10px;
+	font-size:13px;
+}
+.logout .fa{
+	color:#fff !important;	
+}
+.logout .fa:hover, .logout .fa:active, .logout .fa:focus{
+	color:#111 !important;
+}
+input[type=number]{ -moz-appearance: textfield; }
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+.form-inline .form-group{
+	margin-bottom: 20px;
+	float: right;
+}
+.dropdown-menu{
+	z-index: 9999 !important;
+}
+.message_success{background-color: #78b310; color:#fff;padding: 5px;}
+.message_error{background-color: #e74c3c; color:#fff;padding: 5px;}
+.modal-body{
+	position: relative;
+    overflow-y: auto;
+    max-height: 100%;
+}
+@media print {
+    #print_content {
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 15px;
+        font-size: 14px;
+        line-height: 18px;
+        font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+    }
+}
+.searchTxt{
+	margin-bottom: 10px;
+}
+.success-icon{
+	font-size:5em;
+}
+.invoice-save-top{
+	margin-top:20px;height:60px;padding:20px;font-size:20px;
+}
+.invoice-save-btm{
+	height:60px;padding:20px;font-size:20px;
+}
+
+.bottom-ads{
+	padding-left:0%;
+}
+@media (min-width: 768px) {
+	.bottom-ads{
+		padding-left:0%;
+	}
+}
+  
+.login-form {
+    background-image: url('../images/bg.jpg');
+    width: 380px;
+    margin: 1% auto;
+    padding: 20px;
+	color:white;
+}
+.demo-heading {
+	width: 600px;
+    margin: 1% auto;
+    padding: 20px;
+}
+td{
+    text-align:right;
+}
+input {
+  
+  margin-left:0px !important;
+  margin-right:0px !important;
+  margin-top:3px !important;
+  margin-bottom:3px !important;
+  width: 220px;
+}
+#slct{
+  margin-left:0px !important;
+  margin-right:0px !important;
+  margin-top:3px !important;
+  margin-bottom:3px !important;
+  width: 220px;
+  height:22px;
+}
+* {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 40px;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 5px 5px;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+table.paleBlueRows {
+  font-family: "Times New Roman", Times, serif;
+  border: 1px solid #FFFFFF;
+  width: 350px;
+  height: 200px;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.paleBlueRows td, table.paleBlueRows th {
+  border: 1px solid #FFFFFF;
+  padding: 3px 5px;
+}
+table.paleBlueRows tbody td {
+  font-size: 13px;
+}
+table.paleBlueRows tr:nth-child(even) {
+  background: #D0E4F5;
+}
+table.paleBlueRows thead {
+  background: #0B6FA4;
+  border-bottom: 5px solid #FFFFFF;
+}
+table.paleBlueRows thead th {
+  font-size: 17px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  border-left: 2px solid #FFFFFF;
+}
+table.paleBlueRows thead th:first-child {
+  border-left: none;
+}
+
+table.paleBlueRows tfoot {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333333;
+  background: #D0E4F5;
+  border-top: 3px solid #444444;
+}
+table.paleBlueRows tfoot td {
+  font-size: 14px;
+}
+span {
+  content: "\20AE";
+}
+
+.A4 {
+  background: white;
+  width: 21cm;
+  height: 29.7cm;
+  display: block;
+  margin: 0 auto;
+  padding: 10px 25px;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+  overflow-y: scroll;
+  box-sizing: border-box;
+  font-size: 12pt;
+}
+
+@media print {
+  .page-break {
+    display: block;
+    page-break-before: avoid;
+  }
+}
+
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .A4 {
+    box-shadow: none;
+    margin: 0;
+    width: 100%;
+    height: auto;
+  }
+  .noprint {
+    display: none;
+  }
+  .enable-print {
+    display: block;
+  }
+}
+hr { 
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 10px;
+}
+textarea {
+  resize: vertical; /* user can resize vertically, but width is fixed */
+}
+.upload__box {
+  padding: 5px;
+}
+.upload__inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.upload__btn {
+  display: inline-block;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  min-width: 116px;
+  padding: 5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid;
+  background-color: #4045ba;
+  border-color: #4045ba;
+  border-radius: 10px;
+  line-height: 10px;
+  font-size: 14px;
+}
+.upload__btn:hover {
+  background-color: unset;
+  color: #4045ba;
+  transition: all 0.3s ease;
+}
+.upload__btn-box {
+  margin-bottom: 10px;
+}
+.upload__img-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+.upload__img-box {
+  width: 80px;
+  padding: 0 10px;
+  margin-bottom: 12px;
+}
+.container {
+  width: 100%;
+  margin-left: 5%;
+}
+.upload__img-close {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-align: center;
+  line-height: 24px;
+  z-index: 1;
+  cursor: pointer;
+}
+.upload__img-close:after {
+  content: "✖";
+  font-size: 12px;
+  color: white;
+}
+
+.img-bg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  padding-bottom: 100%;
+}
+/* ===== FINAL SELECT FIX ===== */
+
+/* bootstrap-select button */
+.bootstrap-select > .dropdown-toggle {
+    background: #ffffff !important;
+    color: #111 !important;
+    border: 1px solid #d0d5dd !important;
+}
+
+/* selected text */
+.bootstrap-select .filter-option,
+.bootstrap-select .filter-option-inner,
+.bootstrap-select .filter-option-inner-inner {
+    color: #111 !important;
+}
+
+/* dropdown items */
+.bootstrap-select .dropdown-menu,
+.bootstrap-select .dropdown-menu * {
+    background: #ffffff !important;
+    color: #111 !important;
+}
+
+/* hover */
+.bootstrap-select .dropdown-menu li a:hover {
+    background: #eaf3ff !important;
+    color: #000 !important;
+}
+
+/* IMPORTANT: override .btn-dark */
+.bootstrap-select .btn,
+.bootstrap-select .btn:focus,
+.bootstrap-select .btn:hover {
+    color: #111 !important;
+    background-color: #fff !important;
+}
+/* ===== FINAL FIX: Native SELECT text visible ===== */
+select,
+select.form-control,
+#slct {
+  color: #111 !important;
+  background-color: #fff !important;
+
+  /* зарим chrome/safari дээр text "алга" болчихдог асуудлыг хүчээр засна */
+  -webkit-text-fill-color: #111 !important;
+
+  text-indent: 0 !important;
+  text-shadow: none !important;
+}
+
+/* dropdown list доторх option-ууд */
+select option {
+  color: #111 !important;
+  background-color: #fff !important;
+}
+
+/* (зарим Windows/IE edge case) */
+select::-ms-value {
+  color: #111 !important;
+  background: #fff !important;
+}
